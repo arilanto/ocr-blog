@@ -1,0 +1,9 @@
+<ul>
+	<li *ngFor="let p of posts$ | async"
+	 	[ngClass]="{'list-group-item': true,
+                'list-group-item-success': p.loveIts > 0, 
+                'list-group-item-danger': p.loveIts < 0}">
+		<app-postlistitem [post]="p"></app-postlistitem>
+	</li>
+	
+</ul>
